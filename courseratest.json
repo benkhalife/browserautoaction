@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Open URL",
+    "type": "goto",
+    "url": "https://www.coursera.org/learn/managing-adhd-autism-learning-disabilities-and-concussion-in-school",
+    "sleep": 5
+  },
+  {
+    "title": "Go To Course",
+    "type": "click",
+    "tag": "button",
+    "text": "Go to course",
+    "sleep": 10
+  },
+  {
+    "title": "Open Grades",
+    "type": "click",
+    "tag": "a",
+    "attr": "aria-label",
+    "value": "Grades",
+    "sleep": 4
+  },
+  {
+    "title": "Open Section 1",
+    "type": "click",
+    "tag": "a",
+    "text": "ADHD Assessment",
+    "sleep": 5
+  },
+  {
+    "title": "Resume",
+    "type": "click",
+    "tag": "button",
+    "text": "Resume",
+    "sleep": 5
+  },
+  {
+    "title": "Question 1",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "Common diagnoses that occur in children with ADHD include? ",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Conduct disorder",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "Learning disorders",
+        "sleep": 2
+      }
+    ]
+  }
+]

@@ -1,0 +1,105 @@
+[
+  {
+    "type": "goto",
+    "url": "https://www.pesi.com/sq/bh_c_001314_masteringdsm5_feb2023_sq_redirect-610455?redirecturl=1"
+  },
+  {
+    "title": "Enter To Exam",
+    "type": "click",
+    "tag": "a",
+    "attr": "data-productsqueezemediaid",
+    "value": "2724",
+    "sleep": 10
+  },
+  {
+    "type": "frame",
+    "selector": ".mfp-iframe"
+  },
+  {
+    "title": "Open credits box",
+    "type": "click",
+    "tag": "a",
+    "attr": "aria-label",
+    "value": "Click here to select your credits",
+    "sleep": 2
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+    "array_select_one": 2,
+    "sleep": 2
+  },
+  {
+    "title": "Open Exam Box",
+    "type": "click",
+    "tag": "a",
+    "attr": "aria-label",
+    "value": "Click here For Quiz",
+    "sleep": 2
+  },
+  {
+    "type": "click",
+    "tag": "a",
+    "text": "Resume Quiz",
+    "sleep": 8
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "Explain the four steps used to formulate an accurate DSM-5 differential diagnosis for clients with multiple symptoms.",
+    "click": [{ "tag": "label", "text": "Yes" }],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "Sort a trauma client‘s presenting symptoms into cognitive, affective, behavioral, and physiological clusters that form DSM-5 syndromes.",
+    "click": [{ "tag": "label", "text": "Yes" }],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "Formulate a differential diagnosis list for a Case Study client with trauma experiences",
+    "click": [{ "tag": "label", "text": "Yes" }],
+    "sleep": 2
+  },
+  {
+    "title": "Question 4",
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "The diagnosis error rate for a mental disorder is estimated to be",
+    "click": [{ "tag": "span", "text": "10% per year" }],
+    "sleep": 2
+  },
+  {
+    "title": "Question 5",
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "Mental health professionals can reduce errors in diagnosis of mental disorders by using",
+    "click": [{ "tag": "span", "text": "motivational interview approaches." }],
+    "sleep": 2
+  },
+  {
+    "title": "Question 6",
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "A recommended practice for conducting a differential diagnosis is:",
+    "click": [
+      {
+        "tag": "span",
+        "text": "creating a hierarchy of diagnoses from severe to less severe"
+      }
+    ],
+    "sleep": 2
+  }
+]
