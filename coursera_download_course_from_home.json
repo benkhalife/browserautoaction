@@ -1,0 +1,108 @@
+[
+  {
+    "title": "Open URL",
+    "type": "goto",
+    "url": "https://www.coursera.org/learn/google-introduction-to-ai",
+    "sleep": 5,
+    "max_retries": 4,
+    "retry_delay": 10,
+    "timeout": 160000
+  },
+  {
+    "type": "click",
+    "tag": "button",
+    "attr": "data-e2e",
+    "value": "enroll-button",
+    "sleep": 9
+  },
+  {
+    "type": "click",
+    "tag": "a",
+    "text": "Module 1",
+    "sleep": 5
+  },
+  {
+    "type": "click",
+    "tag": "a",
+    "attr": "data-click-key",
+    "value": "open_course_home.period_page.click.item_link",
+    "sleep": 5
+  },
+  {
+    "title": "Find Draver",
+    "type": "group_action",
+    "tag": "button",
+    "attr": "aria-expanded",
+    "value": "false",
+    "class": "cds-AccordionHeader-button",
+    "global_actions": true,
+    "actions": [
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "aria-expanded",
+        "value": "false",
+        "global": true,
+        "class": "cds-AccordionHeader-button",
+        "sleep": 2
+      }
+    ]
+  },
+  {
+    "title": "Find Course List",
+    "type": "group_action",
+    "tag": "ul>li",
+    "actions": [
+      {
+        "type": "click",
+        "tag": "a",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10
+      },
+      {
+        "type": "scroll",
+        "tag": "span",
+        "text": "Downloads",
+        "ignore": "continue",
+        "global": true,
+        "sleep": 2
+      },
+      {
+        "title": "Find Download box",
+        "type": "click",
+        "tag": "span",
+        "text": "Downloads",
+        "global": true,
+        "ignore": "continue",
+        "sleep": 4
+      },
+      {
+        "title": "Download Video",
+        "type": "download_from_link",
+        "tag": "a",
+        "attr": "data-click-key",
+        "value": "open_course_home.focused_lex_video_item.click.download_video",
+        "text": "Lecture Video (240p)",
+        "download_dir": "download_videos",
+        "ignore": "continue",
+        "global": true,
+        "extension": ".mp4",
+        "sleep": 5
+      },
+      {
+        "title": "Download Subtitle",
+        "type": "download_from_link",
+        "tag": "a",
+        "attr": "data-click-key",
+        "value": "open_course_home.focused_lex_video_item.click.focused_lex_download_subtitle",
+        "text": "Subtitles (English)",
+        "download_dir": "download_subs",
+        "ignore": "continue",
+        "extension": ".vtt",
+        "global": true,
+        "sleep": 5
+      }
+    ]
+  }
+]
