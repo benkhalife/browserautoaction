@@ -1139,7 +1139,7 @@ def run(
     start_url: Optional[str] = None,
     profile_dir: Optional[str] = None,
 ):
-    width, height = 1200, 700
+    width, height = 1300, 900
     # width, height = get_desktop_size()
     profile = profile_dir or os.path.join(os.getcwd(), "pw_profile")
 

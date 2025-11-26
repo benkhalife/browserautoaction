@@ -40,16 +40,51 @@
     "tag": "div",
     "attr": "role",
     "value": "group",
-    "if_find_text_inside": "Common diagnoses that occur in children with ADHD include? ",
+    "if_find_text_inside": "True or false. Saying “Great job” to your child",
     "click": [
       {
         "tag": "label",
-        "text": "Conduct disorder",
+        "text": "False",
+        "sleep": 2
+      }
+    ]
+  },
+  {
+    "title": "Question 2",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "True or false. Praise should be delivered immediately after the behavior",
+    "click": [
+      {
+        "tag": "label",
+        "text": "True",
+        "sleep": 2
+      }
+    ]
+  },
+  {
+    "title": "Question 3",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "Which phrases should you AVOID when delivering praise? Check all that apply",
+    "click": [
+      {
+        "tag": "label",
+        "text": "You are such a good boy/girl when you do X,Y",
         "sleep": 2
       },
       {
         "tag": "label",
-        "text": "Learning disorders",
+        "text": "You make me so happy when you do X,Y, and Z!",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "Wow! You did X,Y, and Z just like I asked! Why can’t you always listen to me like that?",
         "sleep": 2
       }
     ]
