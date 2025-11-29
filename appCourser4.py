@@ -328,6 +328,91 @@ def switch_to_main_frame(page):
     return None
 
 
+def exec_step_select(
+    page, step: Dict[str, Any], current_frame=None, parent=None
+) -> None:
+    """
+    Select an option in a <select> element.
+    Supported keys:
+      - tag, class, attr, value, text: to locate the <select>
+      - option_value: value of the <option> to select (optional)
+      - option_label: visible text of the <option> to select (optional)
+      - option_index: index of the <option> to select (optional)
+      - array_select_one: if multiple <select> elements match, which one to use (default: 0)
+    At least one of option_value, option_label, or option_index must be provided.
+    """
+    tag = get_key(step, "tag", default="select")
+    attr = get_key(step, "attr", "arrt", "attribute")
+    value = get_key(step, "value")
+    cls = get_key(step, "class")
+    idx = to_int_or_none(get_key(step, "array_select_one"))
+    ignore_error = get_key(step, "ignore", default=False)
+
+    # Option selection criteria
+    option_value = get_key(step, "option_value")
+    option_label = get_key(step, "option_label")
+    option_index = to_int_or_none(get_key(step, "option_index"))
+
+    if not any(
+        [option_value is not None, option_label is not None, option_index is not None]
+    ):
+        raise RuntimeError(
+            'select step requires one of: "option_value", "option_label", or "option_index"'
+        )
+
+    selector = build_css_selector(tag, cls, attr, value)
+    root = get_locator_root(page, current_frame, parent)
+    loc = root.locator(selector)
+
+    logger.info(f"📋 Select selector: {selector}")
+    try:
+        if idx is None:
+            idx = 0
+        count = loc.count()
+        if count == 0:
+            if ignore_error:
+                logger.warning(f"⚠️ No <select> found but ignoring: {selector}")
+                return
+            else:
+                raise RuntimeError(f"No <select> element found: {selector}")
+        if idx < 0 or idx >= count:
+            if ignore_error:
+                logger.warning(
+                    f"⚠️ array_select_one index {idx} out of range (found {count}), ignoring."
+                )
+                return
+            else:
+                raise RuntimeError(
+                    f"array_select_one index {idx} out of range (found {count})."
+                )
+
+        target_select = loc.nth(idx)
+        target_select.wait_for(
+            state="visible", timeout=float(get_key(step, "timeout", default=35000))
+        )
+        target_select.scroll_into_view_if_needed()
+
+        # Build selection args for select_option()
+        select_args = {}
+        if option_value is not None:
+            select_args["value"] = option_value
+        if option_label is not None:
+            select_args["label"] = option_label
+        if option_index is not None:
+            select_args["index"] = option_index
+
+        logger.info(f"  → Selecting option: {select_args}")
+        target_select.select_option(**select_args)
+
+    except Exception as e:
+        if ignore_error:
+            logger.warning(f"⚠️ Select failed but ignoring: {e}")
+        else:
+            raise RuntimeError(f"Select step failed: {e}") from e
+
+    step_sleep(get_key(step, "sleep"))
+
+
 # ------------------ Step executors ------------------
 def exec_step_goto(page, step: Dict[str, Any]) -> None:
     url = get_key(step, "value", "url")
@@ -1325,6 +1410,8 @@ def run(
                         current_frame = None  # Reset frame context after navigation
                     elif stype_l == "click":
                         exec_step_click(page, step, current_frame)
+                    elif stype_l == "select":
+                        exec_step_select(page, step, current_frame)
                     elif stype_l == "array":
                         exec_step_array(page, step, current_frame)
                     elif stype_l == "group_action":
