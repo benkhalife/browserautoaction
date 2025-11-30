@@ -37,8 +37,108 @@ import time
 from typing import Any, Dict, List, Optional, Tuple
 from urllib.parse import urljoin, urlparse
 
+from openpyxl import load_workbook
 from playwright.sync_api import TimeoutError as PWTimeout
 from playwright.sync_api import sync_playwright
+
+
+def load_excel_rows(file_path: str, start_row: int = 2) -> List[List[str]]:
+    """
+    Load rows from an Excel (.xlsx) file starting from `start_row` (1-based).
+    Returns a list of rows, each row is a list of cell values (as strings).
+    """
+    if not os.path.isfile(file_path):
+        raise FileNotFoundError(f"Excel file not found: {file_path}")
+    wb = load_workbook(file_path, read_only=True, data_only=True)
+    ws = wb.active
+    rows = []
+    for idx, row in enumerate(ws.iter_rows(values_only=True), start=1):
+        if idx < start_row:
+            continue
+        # Convert all cells to string (None → "")
+        clean_row = [str(cell) if cell is not None else "" for cell in row]
+        rows.append(clean_row)
+    wb.close()
+    logger.info(f"📊 Loaded {len(rows)} rows from Excel (starting at row {start_row})")
+    return rows
+
+
+def exec_step_write_excel(
+    page, step: Dict[str, Any], current_row: List[str], current_frame=None, parent=None
+) -> None:
+    """
+    Write a value from the current Excel row into a text field.
+    - `write_from_col`: 1-based column index (e.g., 1 = first column)
+    """
+    col_index = to_int_or_none(get_key(step, "write_from_col"))
+    if col_index is None:
+        raise RuntimeError('write_excel requires "write_from_col" (1-based index).')
+    if col_index < 1:
+        raise RuntimeError('"write_from_col" must be >= 1.')
+
+    # Get value from row (0-based internally)
+    cell_value = ""
+    if col_index - 1 < len(current_row):
+        cell_value = current_row[col_index - 1]
+    else:
+        logger.warning(
+            f"⚠️ Column {col_index} not found in row (row has {len(current_row)} columns). Using empty string."
+        )
+
+    # Now reuse exec_step_write logic, but with `cell_value` as text
+    tag = get_key(step, "tag")
+    attr = get_key(step, "attr", "arrt", "attribute")
+    value = get_key(step, "value")
+    cls = get_key(step, "class")
+    text_filter = get_key(step, "text")
+    idx = to_int_or_none(get_key(step, "array_select_one"))
+    ignore_error = get_key(step, "ignore", default=False)
+    timeout = float(get_key(step, "timeout", default=35000))
+
+    selector = build_css_selector(tag, cls, attr, value)
+    root = get_locator_root(page, current_frame, parent)
+    loc = root.locator(selector)
+    if text_filter:
+        loc = loc.filter(has_text=text_filter)
+
+    logger.info(
+        f"⌨️ [Excel] Writing '{cell_value}' (from col {col_index}) to: {selector}"
+    )
+
+    try:
+        if idx is None:
+            idx = 0
+        count = loc.count()
+        if count == 0:
+            if ignore_error:
+                logger.warning(
+                    f"⚠️ No elements found for write_excel but ignoring: {selector}"
+                )
+                return
+            else:
+                raise RuntimeError(f"No elements found for write_excel: {selector}")
+        if idx < 0 or idx >= count:
+            if ignore_error:
+                logger.warning(f"⚠️ Index {idx} out of range (found {count}), ignoring.")
+                return
+            else:
+                raise RuntimeError(f"Index {idx} out of range (found {count}).")
+
+        target = loc.nth(idx)
+        target.wait_for(state="visible", timeout=timeout)
+        target.scroll_into_view_if_needed()
+        target.click()
+        if get_key(step, "clear", default=True):
+            target.clear()
+        human_type(target, cell_value)
+    except Exception as e:
+        if ignore_error:
+            logger.warning(f"⚠️ write_excel failed but ignoring: {e}")
+        else:
+            raise
+
+    step_sleep(get_key(step, "sleep"))
+
 
 # ------------------ Logging ------------------
 LOG_FILE = "workflow.log"
@@ -57,6 +157,113 @@ import os
 import time
 
 import requests
+
+
+def exec_step_group_excel(
+    page, browser, step: Dict[str, Any], current_frame=None, parent=None
+) -> None:
+    """
+    group_excel:
+    - Reads an Excel file (.xlsx)
+    - Starts from `start_row` (default: 2)
+    - For each row, runs `actions` with access to row data via context
+    Supports in actions:
+      - "write_excel": uses `write_from_col` (1-based index) to get value from current row
+    """
+    file_path = get_key(step, "file")
+    start_row = to_int_or_none(get_key(step, "start_row")) or 2
+    actions: List[Dict[str, Any]] = get_key(step, "actions", "steps", default=[])
+    ignore_error = get_key(step, "ignore", default=False)
+
+    if not file_path:
+        raise RuntimeError('group_excel requires "file" key.')
+    if not actions:
+        raise RuntimeError('group_excel requires non-empty "actions" array.')
+
+    rows = load_excel_rows(file_path, start_row=start_row)
+    if not rows:
+        logger.warning(
+            "⚠️ Excel file has no data rows (after start_row). Skipping actions."
+        )
+        return
+
+    logger.info(f"🧮 Processing {len(rows)} Excel rows...")
+
+    # Iterate over each row
+    for row_index, current_row in enumerate(rows):
+        logger.info(f"🧮 [Excel Row {row_index + start_row}] Processing...")
+        local_frame = current_frame
+
+        # Run each action in the context of this row
+        for j, action in enumerate(actions, start=1):
+            a_title = get_key(action, "title", "Title", default=f"Excel action #{j}")
+            a_type = get_key(action, "type")
+            if not a_type:
+                logger.warning("⚠️ [group_excel] Missing 'type' in action, skipping.")
+                continue
+            stype_l = str(a_type).strip().lower()
+            logger.info(
+                f"   ▶️ [Excel Row {row_index + start_row}] Action {j}: {a_title} ({stype_l})"
+            )
+
+            action_ignore = get_key(action, "ignore", default=False)
+
+            try:
+                if stype_l == "write_excel":
+                    exec_step_write_excel(
+                        page,
+                        action,
+                        current_row,
+                        current_frame=local_frame,
+                        parent=parent,
+                    )
+                elif stype_l == "click":
+                    exec_step_click(page, action, local_frame, parent=parent)
+                elif stype_l == "write":
+                    exec_step_write(page, action, local_frame, parent=parent)
+                elif stype_l == "scroll":
+                    exec_step_scroll(page, action, local_frame, parent=parent)
+                elif stype_l == "array":
+                    exec_step_array(page, action, local_frame, parent=parent)
+                elif stype_l == "group_action":
+                    exec_step_group_action(
+                        page, browser, action, local_frame, parent=parent
+                    )
+                elif stype_l == "download_from_link":
+                    exec_step_download_from_link(
+                        page, action, local_frame, parent=parent
+                    )
+                # elif stype_l in ("download_page", "save_page"):
+                #     exec_step_download_page(page, action)
+                elif stype_l == "use_last_tab":
+                    exec_step_use_last_tab(browser, action)
+                elif stype_l == "goto":
+                    exec_step_goto(page, action)
+                    local_frame = None
+                elif stype_l == "frame":
+                    local_frame = exec_step_frame(page, action)
+                elif stype_l == "main_frame":
+                    local_frame = exec_step_main_frame(page, action)
+                elif stype_l == "select":
+                    exec_step_select(page, action, local_frame, parent=parent)
+                else:
+                    if action_ignore or ignore_error:
+                        logger.warning(
+                            f"⚠️ Unsupported action type in group_excel but ignoring: '{a_type}'"
+                        )
+                    else:
+                        raise RuntimeError(
+                            f"[group_excel] Unsupported action type: '{a_type}'"
+                        )
+            except Exception as e:
+                if action_ignore or ignore_error:
+                    logger.warning(
+                        f"⚠️ [group_excel] Action failed but ignoring: {a_title} | {e}"
+                    )
+                    continue
+                else:
+                    raise
+    step_sleep(get_key(step, "sleep"))
 
 
 # ------------------ Desktop size detection ------------------
@@ -84,8 +291,8 @@ def human_type(element, text: str):
     """Type like a human: small random delays; slow down on spaces."""
     for ch in text:
         element.type(ch)
-        extra = random.randint(200, 600) / 1000 if ch == " " else 0
-        time.sleep(random.randint(50, 250) / 1000 + extra)
+        extra = random.randint(100, 200) / 1000 if ch == " " else 0
+        time.sleep(random.randint(50, 150) / 1000 + extra)
 
 
 # ------------------ Helpers ------------------
@@ -1185,8 +1392,8 @@ def exec_step_group_action(
                     exec_step_download_from_link(
                         page, action, local_frame, parent=effective_parent
                     )
-                elif stype_l in ("download_page", "save_page"):
-                    exec_step_download_page(page, action)
+                # elif stype_l in ("download_page", "save_page"):
+                #     exec_step_download_page(page, action)
                 elif stype_l == "use_last_tab":
                     exec_step_use_last_tab(browser, action)
                 elif stype_l == "goto":
@@ -1412,6 +1619,8 @@ def run(
                         exec_step_click(page, step, current_frame)
                     elif stype_l == "select":
                         exec_step_select(page, step, current_frame)
+                    elif stype_l == "group_excel":
+                        exec_step_group_excel(page, browser, step, current_frame)
                     elif stype_l == "array":
                         exec_step_array(page, step, current_frame)
                     elif stype_l == "group_action":
@@ -1428,8 +1637,8 @@ def run(
                         exec_step_scroll(page, step, current_frame)
                     elif stype_l == "download_from_link":
                         exec_step_download_from_link(page, step, current_frame)
-                    elif stype_l in ("download_page", "save_page"):
-                        exec_step_download_page(page, step)
+                    # elif stype_l in ("download_page", "save_page"):
+                    #     exec_step_download_page(page, step)
                     else:
                         if ignore_error:
                             logger.warning(
