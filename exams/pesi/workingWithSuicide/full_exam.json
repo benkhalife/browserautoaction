@@ -1,0 +1,742 @@
+[
+  {
+    "type": "group_excel",
+    "file": "/home/fara/Projects/Python/BrowserTask/exams/pesi/workingWithSuicide/ifs_users.xlsx",
+    "start_row": 2,
+    "actions": [
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.pesi.co.uk/account/login",
+        "sleep": 10,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "title": "Write email",
+        "type": "write_excel",
+        "tag": "input",
+        "attr": "id",
+        "value": "Email",
+        "write_from_col": 4
+      },
+      {
+        "title": "Write password",
+        "type": "write",
+        "tag": "input",
+        "attr": "id",
+        "value": "txtPassword",
+        "write": "Asdf@1234",
+        "sleep": 2
+      },
+      {
+        "title": "Login",
+        "type": "click",
+        "tab": "button",
+        "attr": "id",
+        "value": "btnLogInButton",
+        "sleep": 5
+      },
+      {
+        "title": "Write email",
+        "type": "write_excel",
+        "tag": "input",
+        "class": "sqemail",
+        "attr": "id",
+        "value": "Email",
+        "write_from_col": 4,
+        "ignore": true
+      },
+      {
+        "title": "Login",
+        "tab": "button",
+        "text": "Get Free Access",
+        "sleep": 5,
+        "ignore": true
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://catalog.pesi.co.uk/guestbook/66769",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "title": "Write email",
+        "type": "write_excel",
+        "tag": "input",
+        "attr": "id",
+        "value": "Email",
+        "ignore": true,
+        "write_from_col": 4
+      },
+      {
+        "title": "Login",
+        "type": "click",
+        "tab": "img",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "title": "Login",
+        "type": "click",
+        "tab": "button",
+        "attr": "id",
+        "value": "btnRegister",
+        "ignore": true,
+        "sleep": 60
+      },
+      {
+        "title": "Change Tab",
+        "type": "click",
+        "tag": "a",
+        "attr": "href",
+        "value": "#courseSchedule",
+        "sleep": 4
+      },
+      {
+        "type": "click",
+        "tag": "a",
+        "text": "CPD Certificate",
+        "attr": "data-currentname",
+        "value": "CPD Certificate",
+        "sleep": 2
+      },
+      {
+        "type": "frame",
+        "selector": ".mfp-iframe",
+        "sleep": 1
+      },
+      {
+        "type": "click",
+        "attr": "href",
+        "value": "#collapseOneQuiz1",
+        "tag": "div",
+        "ignore": true,
+        "sleep": 1
+      },
+      {
+        "type": "click",
+        "tag": "a",
+        "text": "Resume Quiz",
+        "sleep": 4,
+        "ignore": true
+      },
+      {
+        "type": "click",
+        "tag": "a",
+        "class": "NextPageForBeforeQuizMessage",
+        "ignore": true,
+        "sleep": 3
+      },
+      {
+        "title": "Start Exam 2 - Selecr Exam Answers",
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "all have a role in the system.",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Parts"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "Parts that prevent wounds from getting triggered are referred to as",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Managers"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "Being perfect, trying to please, wanting to be liked and obsessing are examples of",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Preventative parts"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "When vulnerability is attacked",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Wounds"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "Suicidal thoughts & actions, shaming, dissociating and purging are examples of",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Extreme parts"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "Everyone has",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Self"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "Suicidal thoughts, feelings and actions are primarily protective responses to",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Underlying trauma"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "These parts carry the hurt and pain from our overwhelming experiences:",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Wounded or burdened parts"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "Within the autonomic nervous system; extreme, reactive, impulsive or hyperaroused parts are considered:",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Sympathetic"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "Resonating with others suffering can be described as:",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Empathy"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "title": "End Exam Answer 1",
+        "type": "click",
+        "tag": "button",
+        "text": "Save & Submit",
+        "sleep": 5
+      },
+      {
+        "title": "Evaluation exam 1",
+        "type": "click",
+        "tag": "a",
+        "attr": "aria-label",
+        "value": "Click here For Evaluation",
+        "sleep": 5
+      },
+      {
+        "title": "Select Yes I certify that I have participated in this program in its entirety",
+        "type": "click",
+        "tag": "label",
+        "attr": "data-single",
+        "value": "true",
+        "text": "Yes",
+        "sleep": 1,
+        "array_select_one": 0
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 0
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 1
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 2
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 3
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 4
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "sleep": 2,
+        "array_select_one": 5
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "attr": "data-val",
+        "value": "true",
+        "option_index": 1,
+        "array_select_one": 6
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "attr": "data-val",
+        "value": "true",
+        "option_index": 1,
+        "array_select_one": 7
+      },
+      {
+        "type": "click",
+        "tag": "input",
+        "attr": "aria-label",
+        "value": "Thumbs up",
+        "array_select_one": 0
+      },
+      {
+        "title": "End Exam Section 1",
+        "type": "click",
+        "tag": "button",
+        "class": "btnSaveChanges",
+        "sleep": 4
+      },
+      {
+        "title": "Start Exam 2 - Enter To From",
+        "type": "main_frame",
+        "sleep": 1
+      },
+      {
+        "title": "Close Exam 1 Modal",
+        "type": "refresh",
+        "sleep": 2
+      },
+      {
+        "title": "Change Tab",
+        "type": "click",
+        "tag": "a",
+        "attr": "href",
+        "value": "#certificate",
+        "sleep": 4
+      },
+      {
+        "title": "Start Exam 2",
+        "type": "click",
+        "tag": "a",
+        "text": "CPD Certificate",
+        "attr": "data-currentname",
+        "value": "CPD Certificate",
+        "sleep": 3,
+        "array_select_one": 1
+      },
+      {
+        "type": "frame",
+        "selector": ".mfp-iframe",
+        "sleep": 1
+      },
+      {
+        "title": "## [1] > Evaluation Level",
+        "type": "click",
+        "attr": "href",
+        "value": "#collapseOneQuiz1",
+        "tag": "div",
+        "ignore": true,
+        "sleep": 1
+      },
+      {
+        "type": "click",
+        "tag": "a",
+        "text": "Resume Quiz",
+        "sleep": 5,
+        "ignore": true
+      },
+      {
+        "type": "click",
+        "tag": "a",
+        "class": "NextPageForBeforeQuizMessage",
+        "ignore": true,
+        "sleep": 3
+      },
+      {
+        "title": "Start Exam 2 - Selecr Exam Answers",
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "leading cause of death in people between the ages of 10 and 34.",
+        "click": [
+          {
+            "tag": "label",
+            "text": "2nd"
+          }
+        ],
+        "sleep": 2
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "Suicide can be defined as a death caused by self-directed injurious behavior with an intention to",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Die"
+          }
+        ],
+        "sleep": 2
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "is defined as a non-fatal self-directed and potentially injurious behavior with an intent to die as a result of the behavior.",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Suicide attempt"
+          }
+        ],
+        "sleep": 2
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "Self-harm, non-suicidal self-injury consists of a broad class of",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Behaviors"
+          }
+        ],
+        "sleep": 2
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "The more chronically a youth engages in non-suicidal self-injury, the more likely they become to attempt suicide over time because there is some _____ the harming of one’s self.",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Desensitization to"
+          }
+        ],
+        "sleep": 2
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "People in the LGBTQ + communities are at",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Higher"
+          }
+        ],
+        "sleep": 2
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "is related both to self-harm and suicide.",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Body image"
+          }
+        ],
+        "sleep": 2
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "are things that we can’t change but can mitigate about ourselves.",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Risk factors"
+          }
+        ],
+        "sleep": 2
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "Giving away possessions might be",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Warning sign"
+          }
+        ],
+        "sleep": 2
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "Suicidal ideation, planning for suicide, intent to follow through, and access to means all should be considered when doing a",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Suicide risk assessment"
+          }
+        ],
+        "sleep": 2
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "even in telehealth counseling settings.",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Crisis plan"
+          }
+        ],
+        "sleep": 2
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "With the case of suicide, the periods between crises are best spent on the development of",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Coping skills"
+          }
+        ],
+        "sleep": 2
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "can model and teach parents, how to be available in an appropriate and non-judgmental manner for their children and youth.",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Collaborative safety planning"
+          }
+        ],
+        "sleep": 2
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "It’s important to educate our youth about",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Suicide"
+          }
+        ],
+        "sleep": 2
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "should also have protocols for youth suicide prevention.",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Schools"
+          }
+        ],
+        "sleep": 2
+      },
+      {
+        "title": "End Exam Answer 2",
+        "type": "click",
+        "tag": "button",
+        "text": "Save & Submit",
+        "sleep": 5
+      },
+      {
+        "title": "Evaluation exam 2",
+        "type": "click",
+        "tag": "a",
+        "attr": "aria-label",
+        "value": "Click here For Evaluation",
+        "sleep": 5
+      },
+      {
+        "title": "Select Yes I certify that I have participated in this program in its entirety",
+        "type": "click",
+        "tag": "label",
+        "attr": "data-single",
+        "value": "true",
+        "text": "Yes",
+        "sleep": 1,
+        "array_select_one": 0
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 0
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 1
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 2
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 3
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 4
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "sleep": 2,
+        "array_select_one": 5
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "attr": "data-val",
+        "value": "true",
+        "option_index": 1,
+        "array_select_one": 6
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "attr": "data-val",
+        "value": "true",
+        "option_index": 1,
+        "array_select_one": 7
+      },
+      {
+        "type": "click",
+        "tag": "input",
+        "attr": "aria-label",
+        "value": "Thumbs up",
+        "array_select_one": 0
+      },
+      {
+        "title": "End Exam Section 1",
+        "type": "click",
+        "tag": "button",
+        "class": "btnSaveChanges",
+        "sleep": 4
+      },
+      {
+        "type": "main_frame",
+        "sleep": 1
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.pesi.co.uk/account/myaccount",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "a",
+        "class": "frederika-CloseButton",
+        "ignore": true,
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "tag": "a",
+        "text": "Sign Out",
+        "sleep": 2
+      }
+    ]
+  }
+]

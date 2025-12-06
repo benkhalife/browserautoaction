@@ -1,0 +1,93 @@
+[
+  {
+    "title": "Evaluation exam 1",
+    "type": "click",
+    "tag": "a",
+    "attr": "aria-label",
+    "value": "Click here For Evaluation",
+    "sleep": 5
+  },
+  {
+    "title": "Select Yes I certify that I have participated in this program in its entirety",
+    "type": "click",
+    "tag": "label",
+    "attr": "data-single",
+    "value": "true",
+    "text": "Yes",
+    "sleep": 1,
+    "array_select_one": 0
+  },
+  {
+    "type": "select",
+    "tag": "select",
+    "class": "clsDrpKeyRating",
+    "option_index": 1,
+    "array_select_one": 0
+  },
+  {
+    "type": "select",
+    "tag": "select",
+    "class": "clsDrpKeyRating",
+    "option_index": 1,
+    "array_select_one": 1
+  },
+  {
+    "type": "select",
+    "tag": "select",
+    "class": "clsDrpKeyRating",
+    "option_index": 1,
+    "array_select_one": 2
+  },
+  {
+    "type": "select",
+    "tag": "select",
+    "class": "clsDrpKeyRating",
+    "option_index": 1,
+    "array_select_one": 3
+  },
+  {
+    "type": "select",
+    "tag": "select",
+    "class": "clsDrpKeyRating",
+    "option_index": 1,
+    "array_select_one": 4
+  },
+  {
+    "type": "select",
+    "tag": "select",
+    "class": "clsDrpKeyRating",
+    "option_index": 1,
+    "sleep": 2,
+    "array_select_one": 5
+  },
+  {
+    "type": "select",
+    "tag": "select",
+    "attr": "data-val",
+    "value": "true",
+    "option_index": 1,
+    "array_select_one": 6
+  },
+  {
+    "type": "select",
+    "tag": "select",
+    "attr": "data-val",
+    "value": "true",
+    "option_index": 1,
+    "array_select_one": 7
+  },
+  {
+    "type": "click",
+    "tag": "input",
+    "attr": "aria-label",
+    "value": "Thumbs up",
+    "array_select_one": 0
+  },
+  {
+    "title": "End Exam Section 1",
+    "type": "click",
+    "tag": "button",
+    "class": "btnSaveChanges",
+    "sleep": 4
+  }
+]

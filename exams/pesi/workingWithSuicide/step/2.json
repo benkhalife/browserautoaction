@@ -1,0 +1,140 @@
+[
+  {
+    "title": "Start Exam 2 - Selecr Exam Answers",
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "all have a role in the system.",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Parts"
+      }
+    ],
+    "sleep": 1
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "Parts that prevent wounds from getting triggered are referred to as",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Managers"
+      }
+    ],
+    "sleep": 1
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "Being perfect, trying to please, wanting to be liked and obsessing are examples of",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Preventative parts"
+      }
+    ],
+    "sleep": 1
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "When vulnerability is attacked",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Wounds"
+      }
+    ],
+    "sleep": 1
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "Suicidal thoughts & actions, shaming, dissociating and purging are examples of",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Extreme parts"
+      }
+    ],
+    "sleep": 1
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "Everyone has",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Self"
+      }
+    ],
+    "sleep": 1
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "Suicidal thoughts, feelings and actions are primarily protective responses to",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Underlying trauma"
+      }
+    ],
+    "sleep": 1
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "These parts carry the hurt and pain from our overwhelming experiences:",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Wounded or burdened parts"
+      }
+    ],
+    "sleep": 1
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "Within the autonomic nervous system; extreme, reactive, impulsive or hyperaroused parts are considered:",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Sympathetic"
+      }
+    ],
+    "sleep": 1
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "Resonating with others suffering can be described as:",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Empathy"
+      }
+    ],
+    "sleep": 1
+  },
+  {
+    "title": "End Exam Answer 1",
+    "type": "click",
+    "tag": "button",
+    "text": "Save & Submit",
+    "sleep": 5
+  }
+]

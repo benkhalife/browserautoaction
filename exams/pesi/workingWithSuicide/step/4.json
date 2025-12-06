@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Start Exam 2 - Enter To From",
+    "type": "main_frame",
+    "sleep": 1
+  },
+  {
+    "title": "Close Exam 1 Modal",
+    "type": "refresh",
+    "sleep": 2
+  },
+  {
+    "title": "Change Tab",
+    "type": "click",
+    "tag": "a",
+    "attr": "href",
+    "value": "#certificate",
+    "sleep": 4
+  },
+  {
+    "title": "Start Exam 2",
+    "type": "click",
+    "tag": "a",
+    "text": "CPD Certificate",
+    "attr": "data-currentname",
+    "value": "CPD Certificate",
+    "sleep": 3,
+    "array_select_one": 1
+  },
+  {
+    "type": "frame",
+    "selector": ".mfp-iframe",
+    "sleep": 1
+  },
+  {
+    "title": "## [1] > Evaluation Level",
+    "type": "click",
+    "attr": "href",
+    "value": "#collapseOneQuiz1",
+    "tag": "div",
+    "ignore": true,
+    "sleep": 1
+  },
+  {
+    "type": "click",
+    "tag": "a",
+    "text": "Resume Quiz",
+    "sleep": 5,
+    "ignore": true
+  },
+  {
+    "type": "click",
+    "tag": "a",
+    "class": "NextPageForBeforeQuizMessage",
+    "ignore": true,
+    "sleep": 3
+  }
+]

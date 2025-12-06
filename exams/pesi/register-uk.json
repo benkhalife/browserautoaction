@@ -1,0 +1,143 @@
+[
+  {
+    "type": "group_excel",
+    "file": "./exams/pesi/ifs/ifs_users.xlsx",
+    "start_row": 2,
+    "actions": [
+      {
+        "type": "goto",
+        "value": "https://www.pesi.co.uk/account/register?returnUrl=%2Faccount%2Fmyaccount",
+        "sleep": 5
+      },
+      {
+        "type": "write_excel",
+        "tag": "input",
+        "attr": "id",
+        "value": "Email",
+        "write_from_col": 4,
+        "sleep": 1
+      },
+      {
+        "type": "write_excel",
+        "tag": "input",
+        "attr": "id",
+        "value": "RetypeEmail",
+        "write_from_col": 4,
+        "sleep": 2
+      },
+      {
+        "type": "write_excel",
+        "tag": "input",
+        "attr": "id",
+        "value": "FirstName",
+        "write_from_col": 2,
+        "sleep": 2
+      },
+      {
+        "type": "write_excel",
+        "tag": "input",
+        "attr": "id",
+        "value": "LastName",
+        "write_from_col": 3,
+        "sleep": 1
+      },
+      {
+        "type": "write",
+        "tag": "input",
+        "attr": "id",
+        "value": "PasswordHash",
+        "write": "Asdf@1234",
+        "sleep": 1
+      },
+      {
+        "type": "write",
+        "tag": "input",
+        "attr": "id",
+        "value": "RetypePasswordHash",
+        "write": "Asdf@1234",
+        "sleep": 2
+      },
+      {
+        "type": "write",
+        "tag": "input",
+        "attr": "id",
+        "value": "Mobile",
+        "write": "11111111111",
+        "sleep": 2
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "attr": "id",
+        "value": "CountryId",
+        "option_value": "Iran",
+        "sleep": 5
+      },
+      {
+        "type": "write",
+        "tag": "input",
+        "attr": "id",
+        "value": "OtherState",
+        "write": "Tehran",
+        "sleep": 2
+      },
+      {
+        "type": "write",
+        "tag": "input",
+        "attr": "id",
+        "value": "Address",
+        "write": "Tehran",
+        "sleep": 2
+      },
+      {
+        "type": "write",
+        "tag": "input",
+        "attr": "id",
+        "value": "City",
+        "write": "Tehran",
+        "sleep": 2
+      },
+      {
+        "type": "write",
+        "tag": "input",
+        "attr": "id",
+        "value": "PostalCode",
+        "write": "1111111",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "tag": "span",
+        "attr": "id",
+        "value": "select2-chosen-2"
+      },
+      {
+        "type": "write",
+        "tag": "input",
+        "attr": "id",
+        "value": "s2id_autogen2_search",
+        "write": "psychologist",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "tag": "span",
+        "text": "Psychologist",
+        "sleep": 3
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "id",
+        "value": "btnRegister",
+        "sleep": 100
+      },
+      {
+        "type": "click",
+        "tag": "a",
+        "text": "Sign Out",
+        "sleep": 10
+      }
+    ]
+  }
+]

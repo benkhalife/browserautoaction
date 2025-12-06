@@ -1,0 +1,205 @@
+[
+  {
+    "title": "Start Exam 2 - Selecr Exam Answers",
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "leading cause of death in people between the ages of 10 and 34.",
+    "click": [
+      {
+        "tag": "label",
+        "text": "2nd"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "Suicide can be defined as a death caused by self-directed injurious behavior with an intention to",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Die"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "is defined as a non-fatal self-directed and potentially injurious behavior with an intent to die as a result of the behavior.",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Suicide attempt"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "Self-harm, non-suicidal self-injury consists of a broad class of",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Behaviors"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "The more chronically a youth engages in non-suicidal self-injury, the more likely they become to attempt suicide over time because there is some _____ the harming of one’s self.",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Desensitization to"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "People in the LGBTQ + communities are at",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Higher"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "is related both to self-harm and suicide.",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Body image"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "are things that we can’t change but can mitigate about ourselves.",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Risk factors"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "Giving away possessions might be",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Warning sign"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "Suicidal ideation, planning for suicide, intent to follow through, and access to means all should be considered when doing a",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Suicide risk assessment"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "even in telehealth counseling settings.",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Crisis plan"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "With the case of suicide, the periods between crises are best spent on the development of",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Coping skills"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "can model and teach parents, how to be available in an appropriate and non-judgmental manner for their children and youth.",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Collaborative safety planning"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "It’s important to educate our youth about",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Suicide"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "should also have protocols for youth suicide prevention.",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Schools"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "title": "End Exam Answer 2",
+    "type": "click",
+    "tag": "button",
+    "text": "Save & Submit",
+    "sleep": 5
+  }
+]

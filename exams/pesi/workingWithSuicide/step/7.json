@@ -1,0 +1,28 @@
+[
+  {
+    "type": "main_frame",
+    "sleep": 1
+  },
+  {
+    "title": "Open URL",
+    "type": "goto",
+    "url": "https://www.pesi.co.uk/account/myaccount",
+    "sleep": 5,
+    "max_retries": 4,
+    "retry_delay": 10,
+    "timeout": 160000
+  },
+  {
+    "type": "click",
+    "tag": "a",
+    "class": "frederika-CloseButton",
+    "ignore": true,
+    "sleep": 2
+  },
+  {
+    "type": "click",
+    "tag": "a",
+    "text": "Sign Out",
+    "sleep": 2
+  }
+]
