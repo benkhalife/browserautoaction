@@ -244,6 +244,8 @@ def exec_step_group_excel(
                     local_frame = exec_step_frame(page, action)
                 elif stype_l == "main_frame":
                     local_frame = exec_step_main_frame(page, action)
+                elif stype_l == "refresh":
+                    exec_step_refresh(page, action)
                 elif stype_l == "select":
                     exec_step_select(page, action, local_frame, parent=parent)
                 else:
@@ -876,9 +878,18 @@ def exec_step_frame(page, step: Dict[str, Any]):
     return switch_to_frame(page, step)
 
 
+def exec_step_refresh(page, step: Dict[str, Any]) -> None:
+    """Reload the current page."""
+    logger.info("🔄 Refreshing the current page")
+    page.reload()
+    step_sleep(get_key(step, "sleep"))
+
+
 def exec_step_main_frame(page, step: Dict[str, Any]):
     """Switch back to the main frame."""
-    return switch_to_main_frame(page, step)
+    switch_to_main_frame(page)
+    step_sleep(get_key(step, "sleep"))
+    return None
 
 
 def exec_step_use_last_tab(browser, step: Dict[str, Any]):
@@ -1623,6 +1634,8 @@ def run(
                         exec_step_group_excel(page, browser, step, current_frame)
                     elif stype_l == "array":
                         exec_step_array(page, step, current_frame)
+                    elif stype_l == "refresh":
+                        exec_step_refresh(page, step)
                     elif stype_l == "group_action":
                         exec_step_group_action(page, browser, step, current_frame)
                     elif stype_l == "frame":
