@@ -1,0 +1,170 @@
+[
+  {
+    "title": "Open URL",
+    "type": "goto",
+    "url": "https://www.coursera.org/learn/everyday-parenting",
+    "sleep": 5,
+    "max_retries": 4,
+    "retry_delay": 10,
+    "timeout": 160000
+  },
+  {
+    "type": "click",
+    "tag": "a",
+    "text": "Log In",
+    "sleep": 5
+  },
+  {
+    "title": "Write email",
+    "type": "write_excel",
+    "tag": "input",
+    "attr": "name",
+    "value": "email",
+    "write_from_col": 2
+  },
+  {
+    "title": "Login",
+    "type": "click",
+    "tab": "button",
+    "attr": "data-track-app",
+    "value": "authentication",
+    "text": "Continue",
+    "sleep": 5
+  },
+  {
+    "title": "Write password",
+    "type": "write",
+    "tag": "input",
+    "attr": "name",
+    "value": "password",
+    "write": "1234@.com",
+    "sleep": 2
+  },
+  {
+    "title": "Login-Enter",
+    "type": "click",
+    "tab": "button",
+    "attr": "data-track-app",
+    "value": "authentication",
+    "text": "Next",
+    "sleep": 5
+  },
+  {
+    "type": "click",
+    "tag": "button",
+    "attr": "data-e2e",
+    "value": "enroll-button",
+    "sleep": 12
+  },
+  {
+    "type": "click",
+    "tag": "div",
+    "text": "I commit to completing this course",
+    "ignore": true,
+    "sleep": 5
+  },
+  {
+    "type": "click",
+    "tag": "button",
+    "text": "Start the course",
+    "ignore": true,
+    "sleep": 5
+  },
+  {
+    "title": "Open URL",
+    "type": "goto",
+    "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/eJgiO/praise",
+    "sleep": 5,
+    "max_retries": 4,
+    "retry_delay": 10,
+    "timeout": 160000
+  },
+  {
+    "type": "click",
+    "tag": "button",
+    "attr": "aria-label",
+    "value": "Close",
+    "ignore": true,
+    "sleep": 5
+  },
+  {
+    "type": "click",
+    "tag": "button",
+    "attr": "data-testid",
+    "value": "CoverPageActionButton",
+    "sleep": 5
+  },
+  {
+    "title": "Question 1",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "True or false. Saying “Great job” to your child",
+    "click": [
+      {
+        "tag": "label",
+        "text": "False",
+        "sleep": 2
+      }
+    ]
+  },
+  {
+    "title": "Question 2",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "True or false. Praise should be delivered immediately after the behavior",
+    "click": [
+      {
+        "tag": "label",
+        "text": "True",
+        "sleep": 2
+      }
+    ]
+  },
+  {
+    "title": "Question 3",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "Which phrases should you AVOID when delivering praise? Check all that apply",
+    "click": [
+      {
+        "tag": "label",
+        "text": "You are such a good boy/girl when you do X,Y",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "You make me so happy when you do X,Y, and Z!",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "Wow! You did X,Y, and Z just like I asked! Why can’t you always listen to me like that?",
+        "sleep": 2
+      }
+    ]
+  },
+  {
+    "type": "click",
+    "attr": "id",
+    "value": "agreement-checkbox-base",
+    "sleep": 2
+  },
+  {
+    "type": "click",
+    "attr": "aria-label",
+    "value": "Submit",
+    "sleep": 2
+  },
+  {
+    "type": "click",
+    "attr": "data-testid",
+    "value": "dialog-submit-button",
+    "sleep": 7
+  }
+]

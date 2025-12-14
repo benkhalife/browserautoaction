@@ -1,0 +1,138 @@
+[
+  {
+    "type": "group_excel",
+    "file": "./users.xlsx",
+    "start_row": 2,
+    "actions": [
+      {
+        "type": "main_frame",
+        "sleep": 1
+      },
+      {
+        "title": "Close Exam 1 Modal",
+        "type": "refresh",
+        "sleep": 2
+      },
+      {
+        "title": "Change Tab",
+        "type": "click",
+        "tag": "a",
+        "attr": "href",
+        "value": "#certificate",
+        "sleep": 4
+      },
+      {
+        "title": "Start Exam 3",
+        "type": "click",
+        "tag": "a",
+        "text": "CPD Certificate",
+        "attr": "data-currentname",
+        "value": "CPD Certificate",
+        "sleep": 3,
+        "array_select_one": 3
+      },
+      {
+        "type": "frame",
+        "selector": ".mfp-iframe"
+      },
+      {
+        "type": "click",
+        "tag": "a",
+        "class": "NextPageForBeforeQuizMessage",
+        "ignore": true,
+        "sleep": 3
+      },
+      {
+        "title": "## [2] > Evaluation Level",
+        "type": "click",
+        "tag": "a",
+        "attr": "aria-label",
+        "value": "Click here For Evaluation",
+        "sleep": 5
+      },
+      {
+        "title": "Select",
+        "type": "click",
+        "tag": "label",
+        "attr": "data-single",
+        "value": "true",
+        "text": "Yes",
+        "sleep": 1,
+        "array_select_one": 0
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 0
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 1
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 2
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 3
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 4
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "sleep": 2,
+        "array_select_one": 5
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "attr": "data-val",
+        "value": "true",
+        "option_index": 1,
+        "array_select_one": 6
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "attr": "data-val",
+        "value": "true",
+        "option_index": 1,
+        "array_select_one": 7
+      },
+      {
+        "type": "click",
+        "tag": "input",
+        "attr": "aria-label",
+        "value": "Thumbs up",
+        "array_select_one": 0
+      },
+      {
+        "title": "End Exam 4 section",
+        "type": "click",
+        "tag": "button",
+        "class": "btnSaveChanges",
+        "sleep": 5
+      }
+    ]
+  }
+]

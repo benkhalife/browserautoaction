@@ -1,0 +1,158 @@
+[
+  {
+    "type": "click",
+    "tag": "button",
+    "attr": "id",
+    "ignore": true,
+    "value": "select-credits-button",
+    "sleep": 5
+  },
+  {
+    "type": "click",
+    "tag": "a",
+    "text": "Resume Quiz",
+    "sleep": 8,
+    "ignore": true
+  },
+  {
+    "type": "click",
+    "tag": "a",
+    "class": "NextPageForBeforeQuizMessage",
+    "ignore": true
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "The diagnosis error rate for a mental disorder is estimated to be",
+    "click": [
+      {
+        "tag": "label",
+        "text": "10% per year"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "Mental health professionals can reduce errors in diagnosis of mental disorders by using",
+    "click": [
+      {
+        "tag": "label",
+        "text": "a structured clinical interview process"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "A recommended practice for conducting a differential diagnosis is:",
+    "click": [
+      {
+        "tag": "label",
+        "text": "considering a medical condition could be causing the symptoms"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "Select the accurate statement about forming an initial DSM-5 diagnosis.",
+    "click": [
+      {
+        "tag": "label",
+        "text": "The DSM-5 manual does not specify the order to list the client’s mental disorders, but placing the primary disorder first is good practice"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "Researchers of effective methods to gather client’s drug use information determined that:",
+    "click": [
+      {
+        "tag": "label",
+        "text": "More accurate medication and drug information is obtained when the client provides both written and verbal responses"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "Identify the factor that is a known source of error during a clinical intake interview.",
+    "click": [
+      {
+        "tag": "label",
+        "text": "the clinician’s cultural assumptions"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "During Phase III “Focused Exploration” of the intake interview the clinician’s main focus is on:",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Symptoms for syndromes not already mentioned by the client"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "What information is essential for a differential diagnosis for a client who reports being a victim of trauma?",
+    "click": [
+      {
+        "tag": "label",
+        "text": "the physical injuries the client received"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "Why does the clinician need to conduct a differential diagnosis even if the client’s experience of trauma preceded the onset of symptoms?",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Trauma and stress are important in the pathogenesis of all DSM-5 disorders, not just the four Trauma and Stressor-Related disorders."
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "array",
+    "tag": "section",
+    "class": ".clsQuestion",
+    "if_find_text_inside": "The definition of a traumatic event in the DSM-5 Posttraumatic Stress Disorder diagnostic criteria is narrow. Which of of these stressful events would meet the criteria?",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Witnessing a fatal automobile crash"
+      }
+    ],
+    "sleep": 2
+  },
+  {
+    "type": "click",
+    "tag": "button",
+    "text": "Save & Submit"
+  }
+]

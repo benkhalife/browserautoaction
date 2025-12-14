@@ -1,0 +1,124 @@
+[
+  {
+    "title": "Open URL",
+    "type": "goto",
+    "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/9mTGK/spanking-and-alternatives",
+    "sleep": 5,
+    "max_retries": 4,
+    "retry_delay": 10,
+    "timeout": 160000
+  },
+  {
+    "type": "click",
+    "tag": "button",
+    "attr": "aria-label",
+    "value": "Close",
+    "ignore": true,
+    "sleep": 5
+  },
+  {
+    "type": "click",
+    "tag": "button",
+    "attr": "data-testid",
+    "value": "CoverPageActionButton",
+    "sleep": 5
+  },
+  {
+    "title": "Question 1",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "True or false. Spanking is a sensitive topic",
+    "click": [
+      {
+        "tag": "label",
+        "text": "True",
+        "sleep": 5
+      }
+    ]
+  },
+  {
+    "title": "Question 2",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "True or false. Over 50 countries have banned physical punishment",
+    "click": [
+      {
+        "tag": "label",
+        "text": "True",
+        "sleep": 2
+      }
+    ]
+  },
+  {
+    "title": "Question 3",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "Which of the following counts as moderate to severe spanking",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Spanking a few times a week",
+        "sleep": 2
+      }
+    ]
+  },
+  {
+    "title": "Question 4",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "Moderate to severe spanking is linked to the following side effects. Check all that apply",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Increased aggression",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "Decreased academic achievement",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "Decreased ability",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "Increased risk of mental",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "Increased risk of poor",
+        "sleep": 2
+      }
+    ]
+  },
+  {
+    "type": "click",
+    "attr": "id",
+    "value": "agreement-checkbox-base",
+    "sleep": 2
+  },
+  {
+    "type": "click",
+    "attr": "aria-label",
+    "value": "Submit",
+    "sleep": 2
+  },
+  {
+    "type": "click",
+    "attr": "data-testid",
+    "value": "dialog-submit-button",
+    "sleep": 10
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "title": "Open URL",
+    "type": "goto",
+    "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/sy52z/school-behaviors-part-2-building-competencies",
+    "sleep": 5,
+    "max_retries": 4,
+    "retry_delay": 10,
+    "timeout": 160000
+  },
+  {
+    "type": "click",
+    "tag": "button",
+    "attr": "aria-label",
+    "value": "Close",
+    "ignore": true,
+    "sleep": 5
+  },
+  {
+    "type": "click",
+    "tag": "button",
+    "attr": "data-testid",
+    "value": "CoverPageActionButton",
+    "sleep": 5
+  },
+  {
+    "title": "Question 1",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "Talking about things and explaining your reasoning is a good way to",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Enhance a ",
+        "sleep": 5
+      }
+    ]
+  },
+  {
+    "title": "Question 2",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "One way to make a child more committed to completing homework in school is to assign extra homework for your child to get",
+    "click": [
+      {
+        "tag": "label",
+        "text": "False",
+        "sleep": 2
+      }
+    ]
+  },
+  {
+    "title": "Question 3",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "Home-based reading programs are best",
+    "click": [
+      {
+        "tag": "label",
+        "text": "When school is not in session",
+        "sleep": 2
+      }
+    ]
+  },
+
+  {
+    "type": "click",
+    "attr": "id",
+    "value": "agreement-checkbox-base",
+    "sleep": 2
+  },
+  {
+    "type": "click",
+    "attr": "aria-label",
+    "value": "Submit",
+    "sleep": 2
+  },
+  {
+    "type": "click",
+    "attr": "data-testid",
+    "value": "dialog-submit-button",
+    "sleep": 10
+  }
+]

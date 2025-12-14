@@ -1,0 +1,139 @@
+[
+  {
+    "title": "Open URL",
+    "type": "goto",
+    "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/ODGUt/attending-planned-ignoring",
+    "sleep": 5,
+    "max_retries": 4,
+    "retry_delay": 10,
+    "timeout": 160000
+  },
+  {
+    "type": "click",
+    "tag": "button",
+    "attr": "aria-label",
+    "value": "Close",
+    "ignore": true,
+    "sleep": 5
+  },
+  {
+    "type": "click",
+    "tag": "button",
+    "attr": "data-testid",
+    "value": "CoverPageActionButton",
+    "sleep": 5
+  },
+  {
+    "title": "Question 1",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "True or false. Attending can be effective without the use of planned ignoring, but planned ignoring can not be effective without attending",
+    "click": [
+      {
+        "tag": "label",
+        "text": "True",
+        "sleep": 5
+      }
+    ]
+  },
+  {
+    "title": "Question 2",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "What are some ways to attend to positive behaviors beyond effusive praise? Check all that apply",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Acknowledging",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "Smiling",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "Asking",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "Talking",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "Hugging",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "Giving",
+        "sleep": 2
+      }
+    ]
+  },
+  {
+    "title": "Question 3",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "What are some ways to ignore behaviors you would like to decrease? Check all that apply",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Not looking",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "Not talking",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "Not smiling",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "Turning away",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "Leaving the room",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "Talking to someone else",
+        "sleep": 2
+      }
+    ]
+  },
+  {
+    "type": "click",
+    "attr": "id",
+    "value": "agreement-checkbox-base",
+    "sleep": 2
+  },
+  {
+    "type": "click",
+    "attr": "aria-label",
+    "value": "Submit",
+    "sleep": 2
+  },
+  {
+    "type": "click",
+    "attr": "data-testid",
+    "value": "dialog-submit-button",
+    "sleep": 10
+  }
+]

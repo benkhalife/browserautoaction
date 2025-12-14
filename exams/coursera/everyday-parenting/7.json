@@ -1,0 +1,134 @@
+[
+  {
+    "title": "Open URL",
+    "type": "goto",
+    "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/fUyR5/point-programs",
+    "sleep": 5,
+    "max_retries": 4,
+    "retry_delay": 10,
+    "timeout": 160000
+  },
+  {
+    "type": "click",
+    "tag": "button",
+    "attr": "aria-label",
+    "value": "Close",
+    "ignore": true,
+    "sleep": 5
+  },
+  {
+    "type": "click",
+    "tag": "button",
+    "attr": "data-testid",
+    "value": "CoverPageActionButton",
+    "sleep": 5
+  },
+  {
+    "title": "Question 1",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "True or false. Establishing a point program is beneficial because it provides another layer of positive consequences to lock in behavior and it is easier",
+    "click": [
+      {
+        "tag": "label",
+        "text": "True",
+        "sleep": 5
+      }
+    ]
+  },
+  {
+    "title": "Question 2",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "Below are examples of behaviors that can earn points. Select two responses that are more effectively presented than the other two options",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Doing 15 minutes of homework",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "Getting into bed by 8:00pm",
+        "sleep": 2
+      }
+    ]
+  },
+  {
+    "title": "Question 3",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "Of the options below, where is best place to keep the point chart in the house",
+    "click": [
+      {
+        "tag": "label",
+        "text": "On the refrigerator",
+        "sleep": 2
+      }
+    ]
+  },
+  {
+    "title": "Question 4",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "What are examples of good rewards? Click all that apply",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Later bedtime",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "Playing a game",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "Extra time on a",
+        "sleep": 2
+      }
+    ]
+  },
+  {
+    "title": "Question 5",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "True or false. Your child should only be able to purchase rewards at the end of every week so he/she has to save up points",
+    "click": [
+      {
+        "tag": "label",
+        "text": "False",
+        "sleep": 2
+      }
+    ]
+  },
+  {
+    "type": "click",
+    "attr": "id",
+    "value": "agreement-checkbox-base",
+    "sleep": 2
+  },
+  {
+    "type": "click",
+    "attr": "aria-label",
+    "value": "Submit",
+    "sleep": 2
+  },
+  {
+    "type": "click",
+    "attr": "data-testid",
+    "value": "dialog-submit-button",
+    "sleep": 10
+  }
+]

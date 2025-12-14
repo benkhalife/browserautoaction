@@ -1,0 +1,446 @@
+[
+  {
+    "title": "Open URL",
+    "type": "goto",
+    "url": "https://catalog.pesi.com/sq/bh_c_001314_masteringdsm5_feb2023_sq_redirect-610455?redirecturl=1",
+    "sleep": 5,
+    "max_retries": 4,
+    "retry_delay": 10,
+    "timeout": 160000
+  },
+  {
+    "type": "click",
+    "tag": "a",
+    "text": "Obtain Credit",
+    "sleep": 5
+  },
+  {
+    "type": "frame",
+    "selector": ".mfp-iframe",
+    "sleep": 1
+  },
+  {
+    "type": "click",
+    "attr": "href",
+    "value": "#panel-credits",
+    "tag": "div",
+    "ignore": true,
+    "sleep": 1
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 0,
+    "sleep": 1
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 1
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 2
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 3
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 4
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 5
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 6,
+    "sleep": 1
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 7
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 8
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 9
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 10,
+    "sleep": 1
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 11
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 12
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 13
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 14
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 15
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 16
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 17
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 18
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 19
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 20
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 21
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 22
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 23
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 24
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 25,
+    "sleep": 1
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 26
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 27
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 28
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 29
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 30
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 31
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 32,
+    "sleep": 1
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 33
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 34
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 35
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 36
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 37
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 38
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 39
+  },
+  {
+    "title": "Select a Credits",
+    "type": "click",
+    "ignore": true,
+    "tag": "input",
+    "attr": "name",
+    "value": "creditTypeIds",
+
+    "array_select_one": 40,
+    "sleep": 1
+  }
+]

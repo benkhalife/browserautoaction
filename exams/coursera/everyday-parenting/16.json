@@ -1,0 +1,134 @@
+[
+  {
+    "title": "Open URL",
+    "type": "goto",
+    "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/W8xMI/nurturing-family-environment",
+    "sleep": 5,
+    "max_retries": 4,
+    "retry_delay": 10,
+    "timeout": 160000
+  },
+  {
+    "type": "click",
+    "tag": "button",
+    "attr": "aria-label",
+    "value": "Close",
+    "ignore": true,
+    "sleep": 5
+  },
+  {
+    "type": "click",
+    "tag": "button",
+    "attr": "data-testid",
+    "value": "CoverPageActionButton",
+    "sleep": 5
+  },
+  {
+    "title": "Question 1",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "Which of the following parenting behaviors is important to establish early on to create a nurturing family environment",
+    "click": [
+      {
+        "tag": "label",
+        "text": "All the",
+        "sleep": 5
+      }
+    ]
+  },
+  {
+    "title": "Question 2",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "How often can you have a family routine or ritual? Check all that apply",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Once a day",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "Once a week",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "Once a month",
+        "sleep": 2
+      },
+      {
+        "tag": "label",
+        "text": "Once a year",
+        "sleep": 2
+      }
+    ]
+  },
+  {
+    "title": "Question 3",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "True or false. Children with positive family connections do better in school and are less likely to show behavioral problems and",
+    "click": [
+      {
+        "tag": "label",
+        "text": "True",
+        "sleep": 2
+      }
+    ]
+  },
+  {
+    "title": "Question 4",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "True or false. Saying “You can tell me anything” to your child is all he/she needs to hear to feel comfortable opening up to you",
+    "click": [
+      {
+        "tag": "label",
+        "text": "False",
+        "sleep": 2
+      }
+    ]
+  },
+  {
+    "title": "Question 5",
+    "type": "array",
+    "tag": "div",
+    "attr": "role",
+    "value": "group",
+    "if_find_text_inside": "Which of the following parenting behaviors is most likely to help with your child’s prosocial behavior",
+    "click": [
+      {
+        "tag": "label",
+        "text": "Hosting playdates",
+        "sleep": 2
+      }
+    ]
+  },
+  {
+    "type": "click",
+    "attr": "id",
+    "value": "agreement-checkbox-base",
+    "sleep": 2
+  },
+  {
+    "type": "click",
+    "attr": "aria-label",
+    "value": "Submit",
+    "sleep": 2
+  },
+  {
+    "type": "click",
+    "attr": "data-testid",
+    "value": "dialog-submit-button",
+    "sleep": 10
+  }
+]

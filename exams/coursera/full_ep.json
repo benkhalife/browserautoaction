@@ -1,0 +1,2226 @@
+[
+  {
+    "type": "group_excel",
+    "file": "/home/fara/Projects/Python/BrowserTask/exams/coursera/coursera-1.2.xlsx",
+    "start_row": 2,
+    "actions": [
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.coursera.org/learn/everyday-parenting",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "a",
+        "text": "Log In",
+        "sleep": 5
+      },
+      {
+        "title": "Write email",
+        "type": "write_excel",
+        "tag": "input",
+        "attr": "name",
+        "value": "email",
+        "write_from_col": 2
+      },
+      {
+        "title": "Login",
+        "type": "click",
+        "tab": "button",
+        "attr": "data-track-app",
+        "value": "authentication",
+        "text": "Continue",
+        "sleep": 5
+      },
+      {
+        "title": "Write password",
+        "type": "write",
+        "tag": "input",
+        "attr": "name",
+        "value": "password",
+        "write": "1234@.com",
+        "sleep": 2
+      },
+      {
+        "title": "Login-Enter",
+        "type": "click",
+        "tab": "button",
+        "attr": "data-track-app",
+        "value": "authentication",
+        "text": "Next",
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "data-e2e",
+        "value": "enroll-button",
+        "sleep": 12
+      },
+      {
+        "type": "click",
+        "tag": "div",
+        "text": "I commit to completing this course",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "text": "Start the course",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/eJgiO/praise",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "aria-label",
+        "value": "Close",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "data-testid",
+        "value": "CoverPageActionButton",
+        "sleep": 5
+      },
+      {
+        "title": "Question 1",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. Saying “Great job” to your child",
+        "click": [
+          {
+            "tag": "label",
+            "text": "False",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 2",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. Praise should be delivered immediately after the behavior",
+        "click": [
+          {
+            "tag": "label",
+            "text": "True",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 3",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "Which phrases should you AVOID when delivering praise? Check all that apply",
+        "click": [
+          {
+            "tag": "label",
+            "text": "You are such a good boy/girl when you do X,Y",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "You make me so happy when you do X,Y, and Z!",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Wow! You did X,Y, and Z just like I asked! Why can’t you always listen to me like that?",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "type": "click",
+        "attr": "id",
+        "value": "agreement-checkbox-base",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "aria-label",
+        "value": "Submit",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "data-testid",
+        "value": "dialog-submit-button",
+        "sleep": 7
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/NPE0j/antecedents",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "aria-label",
+        "value": "Close",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "data-testid",
+        "value": "CoverPageActionButton",
+        "sleep": 5
+      },
+      {
+        "title": "Question 1",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. It is not only important to focus on what you say to your child",
+        "click": [
+          {
+            "tag": "label",
+            "text": "True",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 2",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. “Do it because I said so” is an effective antecedent",
+        "click": [
+          {
+            "tag": "label",
+            "text": "False",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 3",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "Which of the following are helpful antecedents (also known as positive setting events)",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Using clear and specific prompts",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Using a gentle tone of voice",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Offering choices",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Saying “please”",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Offering assistance",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Using a playful challenge",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 4",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "Which of the following is NOT an appropriate Playful Challenge",
+        "click": [
+          {
+            "tag": "label",
+            "text": "I bet you couldn’t do that again. You aren’t smart enough!",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "type": "click",
+        "attr": "id",
+        "value": "agreement-checkbox-base",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "aria-label",
+        "value": "Submit",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "data-testid",
+        "value": "dialog-submit-button",
+        "sleep": 7
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/CcFPc/shaping",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "aria-label",
+        "value": "Close",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "data-testid",
+        "value": "CoverPageActionButton",
+        "sleep": 5
+      },
+      {
+        "title": "Question 1",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "Which of the behaviors below can be developed by using Shaping?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "All of the above",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 2",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. Knowing is the same as doing",
+        "click": [
+          {
+            "tag": "label",
+            "text": "False",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 3",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. When shaping a behavior, you should wait until there is a stable pattern of behavior before",
+        "click": [
+          {
+            "tag": "label",
+            "text": "True",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "type": "click",
+        "attr": "id",
+        "value": "agreement-checkbox-base",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "aria-label",
+        "value": "Submit",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "data-testid",
+        "value": "dialog-submit-button",
+        "sleep": 7
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/BohQA/simulation",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "aria-label",
+        "value": "Close",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "data-testid",
+        "value": "CoverPageActionButton",
+        "sleep": 5
+      },
+      {
+        "title": "Question 1",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "The primary goal of using the simulation technique is to",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Get your child to practice doing a desired behavior",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 2",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "What are some simulations or games you can play to change your child’s behavior over time",
+        "click": [
+          {
+            "tag": "label",
+            "text": "All the above",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 3",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "How often should you run simulation games",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Once a day for a week or so",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "type": "click",
+        "attr": "id",
+        "value": "agreement-checkbox-base",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "aria-label",
+        "value": "Submit",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "data-testid",
+        "value": "dialog-submit-button",
+        "sleep": 7
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/sbbXe/modeling",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "aria-label",
+        "value": "Close",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "data-testid",
+        "value": "CoverPageActionButton",
+        "sleep": 5
+      },
+      {
+        "title": "Question 1",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "Another term for modeling is",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Observational learning",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 2",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "If you want your child to have a certain set of characteristics what is good first step",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Break down the characteristic into concrete behaviors",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 3",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. Saying “Do as I say, not as I do” to your child is a good way to develop positive behaviors",
+        "click": [
+          {
+            "tag": "label",
+            "text": "False",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 4",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. The only way modeling is effective is if you model the behavior",
+        "click": [
+          {
+            "tag": "label",
+            "text": "False",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "type": "click",
+        "attr": "id",
+        "value": "agreement-checkbox-base",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "aria-label",
+        "value": "Submit",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "data-testid",
+        "value": "dialog-submit-button",
+        "sleep": 10
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/vH6dQ/positive-opposite",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "aria-label",
+        "value": "Close",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "data-testid",
+        "value": "CoverPageActionButton",
+        "sleep": 5
+      },
+      {
+        "title": "Question 1",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "Developing the positive opposite is more effective at changing behavior than",
+        "click": [
+          {
+            "tag": "label",
+            "text": "All the Above",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 2",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "Interventions designed to develop positive opposite behaviors in children who do not listen are not used very much because they just do not work that",
+        "click": [
+          {
+            "tag": "label",
+            "text": "False",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 3",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "We are naturally inclined to attend to negative behaviors so that makes it especially difficult to",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Attend to positive opposite behavior",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "type": "click",
+        "attr": "id",
+        "value": "agreement-checkbox-base",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "aria-label",
+        "value": "Submit",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "data-testid",
+        "value": "dialog-submit-button",
+        "sleep": 10
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/fUyR5/point-programs",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "aria-label",
+        "value": "Close",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "data-testid",
+        "value": "CoverPageActionButton",
+        "sleep": 5
+      },
+      {
+        "title": "Question 1",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. Establishing a point program is beneficial because it provides another layer of positive consequences to lock in behavior and it is easier",
+        "click": [
+          {
+            "tag": "label",
+            "text": "True",
+            "sleep": 5
+          }
+        ]
+      },
+      {
+        "title": "Question 2",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "Below are examples of behaviors that can earn points. Select two responses that are more effectively presented than the other two options",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Doing 15 minutes of homework",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Getting into bed by 8:00pm",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 3",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "Of the options below, where is best place to keep the point chart in the house",
+        "click": [
+          {
+            "tag": "label",
+            "text": "On the refrigerator",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 4",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "What are examples of good rewards? Click all that apply",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Later bedtime",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Playing a game",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Extra time on a",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 5",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. Your child should only be able to purchase rewards at the end of every week so he/she has to save up points",
+        "click": [
+          {
+            "tag": "label",
+            "text": "False",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "type": "click",
+        "attr": "id",
+        "value": "agreement-checkbox-base",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "aria-label",
+        "value": "Submit",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "data-testid",
+        "value": "dialog-submit-button",
+        "sleep": 10
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/ODGUt/attending-planned-ignoring",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "aria-label",
+        "value": "Close",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "data-testid",
+        "value": "CoverPageActionButton",
+        "sleep": 5
+      },
+      {
+        "title": "Question 1",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. Attending can be effective without the use of planned ignoring, but planned ignoring can not be effective without attending",
+        "click": [
+          {
+            "tag": "label",
+            "text": "True",
+            "sleep": 5
+          }
+        ]
+      },
+      {
+        "title": "Question 2",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "What are some ways to attend to positive behaviors beyond effusive praise? Check all that apply",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Acknowledging",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Smiling",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Asking",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Talking",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Hugging",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Giving",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 3",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "What are some ways to ignore behaviors you would like to decrease? Check all that apply",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Not looking",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Not talking",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Not smiling",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Turning away",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Leaving the room",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Talking to someone else",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "type": "click",
+        "attr": "id",
+        "value": "agreement-checkbox-base",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "aria-label",
+        "value": "Submit",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "data-testid",
+        "value": "dialog-submit-button",
+        "sleep": 10
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/0ksJW/punishment-basics",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "aria-label",
+        "value": "Close",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "data-testid",
+        "value": "CoverPageActionButton",
+        "sleep": 5
+      },
+      {
+        "title": "Question 1",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. Punishment is often effective at stopping negative behavior in the moment",
+        "click": [
+          {
+            "tag": "label",
+            "text": "True",
+            "sleep": 5
+          }
+        ]
+      },
+      {
+        "title": "Question 2",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. Punishment is often effective at developing positive behaviors in the long term",
+        "click": [
+          {
+            "tag": "label",
+            "text": "False",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 3",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "Which of the following is a negative side effect of frequent punishment",
+        "click": [
+          {
+            "tag": "label",
+            "text": "All of",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 4",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "What are the recommended forms of punishment? Select 3",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Time out from",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Loss of a privilege",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Loss of points",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "type": "click",
+        "attr": "id",
+        "value": "agreement-checkbox-base",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "aria-label",
+        "value": "Submit",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "data-testid",
+        "value": "dialog-submit-button",
+        "sleep": 10
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/qY11b/time-out-from-reinforcement",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "aria-label",
+        "value": "Close",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "data-testid",
+        "value": "CoverPageActionButton",
+        "sleep": 5
+      },
+      {
+        "title": "Question 1",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "Of the options listed below, where is the best place to host a time out",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Bottom of",
+            "sleep": 5
+          }
+        ]
+      },
+      {
+        "title": "Question 2",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "What is the best length of a timeout",
+        "click": [
+          {
+            "tag": "label",
+            "text": "5 min",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 3",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. You don’t have to explain how time out works to your child. Good children just listen to you and follow your orders",
+        "click": [
+          {
+            "tag": "label",
+            "text": "False",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "type": "click",
+        "attr": "id",
+        "value": "agreement-checkbox-base",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "aria-label",
+        "value": "Submit",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "data-testid",
+        "value": "dialog-submit-button",
+        "sleep": 10
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/9mTGK/spanking-and-alternatives",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "aria-label",
+        "value": "Close",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "data-testid",
+        "value": "CoverPageActionButton",
+        "sleep": 5
+      },
+      {
+        "title": "Question 1",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. Spanking is a sensitive topic",
+        "click": [
+          {
+            "tag": "label",
+            "text": "True",
+            "sleep": 5
+          }
+        ]
+      },
+      {
+        "title": "Question 2",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. Over 50 countries have banned physical punishment",
+        "click": [
+          {
+            "tag": "label",
+            "text": "True",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 3",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "Which of the following counts as moderate to severe spanking",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Spanking a few times a week",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 4",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "Moderate to severe spanking is linked to the following side effects. Check all that apply",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Increased aggression",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Decreased academic achievement",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Decreased ability",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Increased risk of mental",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Increased risk of poor",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "type": "click",
+        "attr": "id",
+        "value": "agreement-checkbox-base",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "aria-label",
+        "value": "Submit",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "data-testid",
+        "value": "dialog-submit-button",
+        "sleep": 10
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/0NwTO/troubleshooting-part-1-the-basics",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "aria-label",
+        "value": "Close",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "data-testid",
+        "value": "CoverPageActionButton",
+        "sleep": 5
+      },
+      {
+        "title": "Question 1",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. Slight modifications in applying a technique can lead to a major improvement in your child’s behavior",
+        "click": [
+          {
+            "tag": "label",
+            "text": "True",
+            "sleep": 5
+          }
+        ]
+      },
+      {
+        "title": "Question 2",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. Using one tool at a time will often not work",
+        "click": [
+          {
+            "tag": "label",
+            "text": "True",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 3",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. Timing is crucial when delivering the techniques - delivery should immediately precede or follow the desired",
+        "click": [
+          {
+            "tag": "label",
+            "text": "True",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 4",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "Which technique video should you go back to if you are demanding too much behavior too soon in a behavior-change program",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Shaping",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "type": "click",
+        "attr": "id",
+        "value": "agreement-checkbox-base",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "aria-label",
+        "value": "Submit",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "data-testid",
+        "value": "dialog-submit-button",
+        "sleep": 10
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/y105u/troubleshooting-part-2-advanced-techniques",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "aria-label",
+        "value": "Close",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "data-testid",
+        "value": "CoverPageActionButton",
+        "sleep": 5
+      },
+      {
+        "title": "Question 1",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. Jumpstarting increases the likelihood of getting some sequence to be completed by asking for a small portion of the",
+        "click": [
+          {
+            "tag": "label",
+            "text": "True",
+            "sleep": 5
+          }
+        ]
+      },
+      {
+        "title": "Question 2",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. Consequence sharing is when you reward multiple children based on the actions of one child in a behavior-change",
+        "click": [
+          {
+            "tag": "label",
+            "text": "True",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 3",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. A group program is a technique in which all or most of the children in the group need to follow a behavior in order to",
+        "click": [
+          {
+            "tag": "label",
+            "text": "True",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "type": "click",
+        "attr": "id",
+        "value": "agreement-checkbox-base",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "aria-label",
+        "value": "Submit",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "data-testid",
+        "value": "dialog-submit-button",
+        "sleep": 10
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/Ae4HB/adolescents-part-1",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "aria-label",
+        "value": "Close",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "data-testid",
+        "value": "CoverPageActionButton",
+        "sleep": 5
+      },
+      {
+        "title": "Question 1",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. The ability to control impulsive behavior develops in a person’s early 20s",
+        "click": [
+          {
+            "tag": "label",
+            "text": "True",
+            "sleep": 5
+          }
+        ]
+      },
+      {
+        "title": "Question 2",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. Even as children enter into their teens, enthusiastic tone and a gentle touch are crucial components of special praise",
+        "click": [
+          {
+            "tag": "label",
+            "text": "False",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 3",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "If your teen is annoying you, then you should",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Ignore him",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "type": "click",
+        "attr": "id",
+        "value": "agreement-checkbox-base",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "aria-label",
+        "value": "Submit",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "data-testid",
+        "value": "dialog-submit-button",
+        "sleep": 10
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/tqhqW/adolescents-part-2",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "aria-label",
+        "value": "Close",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "data-testid",
+        "value": "CoverPageActionButton",
+        "sleep": 5
+      },
+      {
+        "title": "Question 1",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "Compromising with your teen accomplishes which of the following?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "All the",
+            "sleep": 5
+          }
+        ]
+      },
+      {
+        "title": "Question 2",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "Which of the following statements are most effective when negotiating with your child?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Have you considered",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 3",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "The last step of problem solving with your child is",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Role playing the best",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "type": "click",
+        "attr": "id",
+        "value": "agreement-checkbox-base",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "aria-label",
+        "value": "Submit",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "data-testid",
+        "value": "dialog-submit-button",
+        "sleep": 10
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/W8xMI/nurturing-family-environment",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "aria-label",
+        "value": "Close",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "data-testid",
+        "value": "CoverPageActionButton",
+        "sleep": 5
+      },
+      {
+        "title": "Question 1",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "Which of the following parenting behaviors is important to establish early on to create a nurturing family environment",
+        "click": [
+          {
+            "tag": "label",
+            "text": "All the",
+            "sleep": 5
+          }
+        ]
+      },
+      {
+        "title": "Question 2",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "How often can you have a family routine or ritual? Check all that apply",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Once a day",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Once a week",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Once a month",
+            "sleep": 2
+          },
+          {
+            "tag": "label",
+            "text": "Once a year",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 3",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. Children with positive family connections do better in school and are less likely to show behavioral problems and",
+        "click": [
+          {
+            "tag": "label",
+            "text": "True",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 4",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. Saying “You can tell me anything” to your child is all he/she needs to hear to feel comfortable opening up to you",
+        "click": [
+          {
+            "tag": "label",
+            "text": "False",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 5",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "Which of the following parenting behaviors is most likely to help with your child’s prosocial behavior",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Hosting playdates",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "type": "click",
+        "attr": "id",
+        "value": "agreement-checkbox-base",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "aria-label",
+        "value": "Submit",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "data-testid",
+        "value": "dialog-submit-button",
+        "sleep": 10
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/iMGaD/common-misconceptions",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "aria-label",
+        "value": "Close",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "data-testid",
+        "value": "CoverPageActionButton",
+        "sleep": 5
+      },
+      {
+        "title": "Question 1",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. If your typical punishment is not working to change your child’s behavior you should increase the severity",
+        "click": [
+          {
+            "tag": "label",
+            "text": "False",
+            "sleep": 5
+          }
+        ]
+      },
+      {
+        "title": "Question 2",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "To develop positive behaviors there is no such thing as giving",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Too much praise",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 3",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. Knowing is not the same as doing",
+        "click": [
+          {
+            "tag": "label",
+            "text": "True",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 4",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "Which of the statements below is useful to develop sharing in your child?  Telling your child",
+        "click": [
+          {
+            "tag": "label",
+            "text": "We are about",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "type": "click",
+        "attr": "id",
+        "value": "agreement-checkbox-base",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "aria-label",
+        "value": "Submit",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "data-testid",
+        "value": "dialog-submit-button",
+        "sleep": 10
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/v6raN/school-behaviors-part-1-handling-problems",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "aria-label",
+        "value": "Close",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "data-testid",
+        "value": "CoverPageActionButton",
+        "sleep": 5
+      },
+      {
+        "title": "Question 1",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. Teachers don’t want parents stepping on their toes and playing an active role in changing their child’s behavior",
+        "click": [
+          {
+            "tag": "label",
+            "text": "False",
+            "sleep": 5
+          }
+        ]
+      },
+      {
+        "title": "Question 2",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "In a home-based reinforcement program, which is the best method for the teacher to notify you about your child’s daily behavior",
+        "click": [
+          {
+            "tag": "label",
+            "text": "A card",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 3",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. In a home-based reinforcement program, you should always react to your child’s daily behavior score in the same",
+        "click": [
+          {
+            "tag": "label",
+            "text": "False",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "type": "click",
+        "attr": "id",
+        "value": "agreement-checkbox-base",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "aria-label",
+        "value": "Submit",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "data-testid",
+        "value": "dialog-submit-button",
+        "sleep": 10
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/sy52z/school-behaviors-part-2-building-competencies",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "aria-label",
+        "value": "Close",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "data-testid",
+        "value": "CoverPageActionButton",
+        "sleep": 5
+      },
+      {
+        "title": "Question 1",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "Talking about things and explaining your reasoning is a good way to",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Enhance a ",
+            "sleep": 5
+          }
+        ]
+      },
+      {
+        "title": "Question 2",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "One way to make a child more committed to completing homework in school is to assign extra homework for your child to get",
+        "click": [
+          {
+            "tag": "label",
+            "text": "False",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 3",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "Home-based reading programs are best",
+        "click": [
+          {
+            "tag": "label",
+            "text": "When school is not in session",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "type": "click",
+        "attr": "id",
+        "value": "agreement-checkbox-base",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "aria-label",
+        "value": "Submit",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "data-testid",
+        "value": "dialog-submit-button",
+        "sleep": 10
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/aLna4/seeking-professional-help-part-1",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "aria-label",
+        "value": "Close",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "data-testid",
+        "value": "CoverPageActionButton",
+        "sleep": 5
+      },
+      {
+        "title": "Question 1",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. If you suspect your child might need help, then you should seek professional help",
+        "click": [
+          {
+            "tag": "label",
+            "text": "True",
+            "sleep": 5
+          }
+        ]
+      },
+      {
+        "title": "Question 2",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. “Bad mothering” or “bad fathering” is often the basis for mental illness and related problems.",
+        "click": [
+          {
+            "tag": "label",
+            "text": "False",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 3",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "Which of the behaviors below require immediate attention",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Making threats to kill a teacher",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "type": "click",
+        "attr": "id",
+        "value": "agreement-checkbox-base",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "aria-label",
+        "value": "Submit",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "data-testid",
+        "value": "dialog-submit-button",
+        "sleep": 10
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/yM5Iq/seeking-professional-help-part-2",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "text": "Continue learning",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "data-testid",
+        "value": "CoverPageActionButton",
+        "sleep": 5
+      },
+      {
+        "title": "Question 1",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. Evaluation and treatment are synonyms which refer to a well-established solution to your child’s psychological, medica",
+        "click": [
+          {
+            "tag": "label",
+            "text": "False",
+            "sleep": 5
+          }
+        ]
+      },
+      {
+        "title": "Question 2",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "True or false. You should be skeptical of doing a generic web search to research treatment options for your child",
+        "click": [
+          {
+            "tag": "label",
+            "text": "True",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "title": "Question 3",
+        "type": "array",
+        "tag": "div",
+        "attr": "role",
+        "value": "group",
+        "if_find_text_inside": "Which of the following questions should you ask your licensed professional",
+        "click": [
+          {
+            "tag": "label",
+            "text": "All of the above",
+            "sleep": 2
+          }
+        ]
+      },
+      {
+        "type": "click",
+        "attr": "id",
+        "value": "agreement-checkbox-base",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "aria-label",
+        "value": "Submit",
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "attr": "data-testid",
+        "value": "dialog-submit-button",
+        "sleep": 5
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.coursera.org/learn/everyday-parenting/assignment-submission/yM5Iq/seeking-professional-help-part-2",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "attr": "data-e2e",
+        "value": "header-profile",
+        "ignore": true,
+        "sleep": 5
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "text": "Log Out",
+        "attr": "data-track-component",
+        "value": "logout_btn",
+        "sleep": 5
+      }
+    ]
+  }
+]

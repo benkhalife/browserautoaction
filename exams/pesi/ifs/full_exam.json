@@ -1,0 +1,1213 @@
+[
+  {
+    "type": "group_excel",
+    "file": "/home/fara/Projects/Python/BrowserTask/exams/pesi/ifs/ifs_users.xlsx",
+    "start_row": 2,
+    "actions": [
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.pesi.co.uk/account/login",
+        "sleep": 10,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "title": "Write email",
+        "type": "write_excel",
+        "tag": "input",
+        "attr": "id",
+        "value": "Email",
+        "write_from_col": 4
+      },
+      {
+        "title": "Write password",
+        "type": "write",
+        "tag": "input",
+        "attr": "id",
+        "value": "txtPassword",
+        "write": "Asdf@1234",
+        "sleep": 2
+      },
+      {
+        "title": "Login",
+        "type": "click",
+        "tab": "button",
+        "attr": "id",
+        "value": "btnLogInButton",
+        "sleep": 5
+      },
+      {
+        "title": "Write email",
+        "type": "write_excel",
+        "tag": "input",
+        "class": "sqemail",
+        "attr": "id",
+        "value": "Email",
+        "write_from_col": 4,
+        "ignore": true
+      },
+      {
+        "title": "Login",
+        "tab": "button",
+        "text": "Get Free Access",
+        "sleep": 5,
+        "ignore": true
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.pesi.co.uk/sales/uk_c_031481_treatingtraumawithifs_organic-619908",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "title": "Write email",
+        "type": "write_excel",
+        "tag": "input",
+        "attr": "id",
+        "value": "Email",
+        "write_from_col": 4
+      },
+      {
+        "title": "Login",
+        "type": "click",
+        "tab": "img",
+        "sleep": 5
+      },
+      {
+        "title": "Login",
+        "type": "click",
+        "tab": "button",
+        "attr": "id",
+        "value": "btnRegister",
+        "sleep": 60
+      },
+      {
+        "title": "Change Tab",
+        "type": "click",
+        "tag": "a",
+        "attr": "href",
+        "value": "#certificate",
+        "sleep": 4
+      },
+      {
+        "type": "click",
+        "tag": "a",
+        "text": "CPD Certificate",
+        "attr": "data-currentname",
+        "value": "CPD Certificate",
+        "sleep": 2
+      },
+      {
+        "type": "frame",
+        "selector": ".mfp-iframe",
+        "sleep": 1
+      },
+      {
+        "type": "click",
+        "attr": "href",
+        "value": "#collapseOneQuiz1",
+        "tag": "div",
+        "ignore": true,
+        "sleep": 1
+      },
+      {
+        "type": "click",
+        "tag": "a",
+        "text": "Resume Quiz",
+        "sleep": 4,
+        "ignore": true
+      },
+      {
+        "type": "click",
+        "tag": "a",
+        "class": "NextPageForBeforeQuizMessage",
+        "ignore": true,
+        "sleep": 3
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "The Parts of our systems that carry unresolved pain are called",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Exiles"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "The subgroup of Protectors that are proactive in their attempts to keep pain buried and to prevent re-wounding are called",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Managers"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "The subgroup of Protectors that react when pain has been activated in the system are called",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Firefighters"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "Strategies such as controlling, striving, caretaking, criticizing, and perfectionism are most commonly employed by",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Managers"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "Strategies such as drinking, drug use, overspending and binge eating are most commonly used by",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Firefighters"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "Trauma can cause protective Parts to move from",
+        "click": [
+          {
+            "tag": "label",
+            "text": "preferred roles to extreme roles"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "The burdens that consist of negative/extreme beliefs about oneself commonly arise from",
+        "click": [
+          {
+            "tag": "label",
+            "text": "The meaning that Parts make of external events"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "Which of the following assumptions about parts is NOT accurate?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Parts are created as a result of trauma."
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "Which of the following assumptions about the Self is NOT accurate?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Self can be understood as another Part of the individual."
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "Which of the following is not a quality of Self?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Cynicism"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "When a Part obscures Self and you see the world through the Part’s eyes, think its thoughts, and feel its feelings, it is called",
+        "click": [
+          {
+            "tag": "label",
+            "text": "blending"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "The act of separating from a Part so that you can relate to it from Self is called",
+        "click": [
+          {
+            "tag": "label",
+            "text": "unblending"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "A “critical mass” of Self-energy is reflected in the client showing at least some",
+        "click": [
+          {
+            "tag": "label",
+            "text": "curiosity"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "A client needs at least",
+        "click": [
+          {
+            "tag": "label",
+            "text": "a “critical mass” of Self-energy available"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "In IFS, the Self is",
+        "click": [
+          {
+            "tag": "label",
+            "text": "the healing entity and natural leader of our systems"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "Which of the following is a goal of IFS therapy?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Differentiate from parts and gain more access to Self so clients can learn to lead from Self"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "According to IFS, dissociation can be conceptualized as",
+        "click": [
+          {
+            "tag": "label",
+            "text": "the activity of a protective Part"
+          }
+        ],
+        "sleep": 2
+      },
+      {
+        "title": "End Exam Answer 1",
+        "type": "click",
+        "tag": "button",
+        "text": "Save & Submit",
+        "sleep": 5
+      },
+      {
+        "title": "Evaluation exam 1",
+        "type": "click",
+        "tag": "a",
+        "attr": "aria-label",
+        "value": "Click here For Evaluation",
+        "sleep": 5
+      },
+      {
+        "title": "Select Yes I certify that I have participated in this program in its entirety",
+        "type": "click",
+        "tag": "label",
+        "attr": "data-single",
+        "value": "true",
+        "text": "Yes",
+        "sleep": 1,
+        "array_select_one": 0
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 0
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 1
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 2
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 3
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 4
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "sleep": 2,
+        "array_select_one": 5
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "attr": "data-val",
+        "value": "true",
+        "option_index": 1,
+        "array_select_one": 6
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "attr": "data-val",
+        "value": "true",
+        "option_index": 1,
+        "array_select_one": 7
+      },
+      {
+        "type": "click",
+        "tag": "input",
+        "attr": "aria-label",
+        "value": "Thumbs up",
+        "array_select_one": 0
+      },
+      {
+        "title": "End Exam Section 1",
+        "type": "click",
+        "tag": "button",
+        "class": "btnSaveChanges",
+        "sleep": 4
+      },
+      {
+        "type": "main_frame",
+        "sleep": 1
+      },
+      {
+        "title": "Close Exam 1 Modal",
+        "type": "refresh",
+        "sleep": 2
+      },
+      {
+        "title": "Change Tab",
+        "type": "click",
+        "tag": "a",
+        "attr": "href",
+        "value": "#certificate",
+        "sleep": 4
+      },
+      {
+        "title": "Start Exam 2",
+        "type": "click",
+        "tag": "a",
+        "text": "CPD Certificate",
+        "attr": "data-currentname",
+        "value": "CPD Certificate",
+        "sleep": 3,
+        "array_select_one": 1
+      },
+      {
+        "type": "frame",
+        "selector": ".mfp-iframe",
+        "sleep": 1
+      },
+      {
+        "title": "## [1] > Evaluation Level",
+        "type": "click",
+        "attr": "href",
+        "value": "#collapseOneQuiz1",
+        "tag": "div",
+        "ignore": true,
+        "sleep": 1
+      },
+      {
+        "type": "click",
+        "tag": "a",
+        "text": "Resume Quiz",
+        "sleep": 5,
+        "ignore": true
+      },
+      {
+        "type": "click",
+        "tag": "a",
+        "class": "NextPageForBeforeQuizMessage",
+        "ignore": true,
+        "sleep": 3
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "What are 2 characteristics of a good IFS clinician?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Owning the model and owning the protocol"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "Nancy Sowell describes the IFS system as an Orchestra, where the parts are the",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Instruments"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "Within IFS, it’s not “Parts",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Bad, Good"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "Which is one example of a common therapist part?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Caretaking manager"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "What is another example of a common therapist part?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Over identify with the client’s emotions"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "What is the 3rd step in the continuum of Self and Consciousness?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Self-led"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "What is one component of the checklist for becoming aware?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Cognition"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "Once a therapist helps the client unblend and find their Self, it is as if there are",
+        "click": [
+          {
+            "tag": "label",
+            "text": "2 therapists in the room"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "The ability to unblend, accessing Self-energy, awake, aware and attuned can be defined as which of the 5 Ps of an IFS Self led therapist?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Presence"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "The first step of a U turn is what?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Notice how the triggered part is coming up"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "click",
+        "tag": "button",
+        "text": "Save & Submit",
+        "sleep": 5
+      },
+      {
+        "title": "## [2] > Evaluation Level",
+        "type": "click",
+        "tag": "a",
+        "attr": "aria-label",
+        "value": "Click here For Evaluation",
+        "sleep": 5
+      },
+      {
+        "title": "Select",
+        "type": "click",
+        "tag": "label",
+        "attr": "data-single",
+        "value": "true",
+        "text": "Yes",
+        "sleep": 1,
+        "array_select_one": 0
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 0
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 1
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 2
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 3
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 4
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "sleep": 2,
+        "array_select_one": 5
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "attr": "data-val",
+        "value": "true",
+        "option_index": 1,
+        "array_select_one": 6
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "attr": "data-val",
+        "value": "true",
+        "option_index": 1,
+        "array_select_one": 7
+      },
+      {
+        "type": "click",
+        "tag": "input",
+        "attr": "aria-label",
+        "value": "Thumbs up",
+        "array_select_one": 0,
+        "sleep": 1
+      },
+      {
+        "title": "End Exam 2 section",
+        "type": "click",
+        "tag": "button",
+        "class": "btnSaveChanges",
+        "sleep": 7
+      },
+      {
+        "type": "main_frame",
+        "sleep": 1
+      },
+      {
+        "title": "Close Exam 1 Modal",
+        "type": "refresh",
+        "sleep": 2
+      },
+      {
+        "title": "Change Tab",
+        "type": "click",
+        "tag": "a",
+        "attr": "href",
+        "value": "#certificate",
+        "sleep": 4
+      },
+      {
+        "title": "Start Exam 3",
+        "type": "click",
+        "tag": "a",
+        "text": "CPD Certificate",
+        "attr": "data-currentname",
+        "value": "CPD Certificate",
+        "sleep": 3,
+        "array_select_one": 2
+      },
+      {
+        "type": "frame",
+        "selector": ".mfp-iframe",
+        "sleep": 1
+      },
+      {
+        "title": "## [1] > Evaluation Level",
+        "type": "click",
+        "attr": "href",
+        "value": "#collapseOneQuiz1",
+        "tag": "div",
+        "ignore": true,
+        "sleep": 1
+      },
+      {
+        "type": "click",
+        "tag": "a",
+        "text": "Resume Quiz",
+        "sleep": 5,
+        "ignore": true
+      },
+      {
+        "type": "click",
+        "tag": "a",
+        "class": "NextPageForBeforeQuizMessage",
+        "ignore": true,
+        "sleep": 3
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "What are the two paths to relate to parts?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "In-sight and direct access"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "When in-sight work is not possible, what is recommended?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Direct access"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "What is the primary purpose of direct access?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Unblending"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "What part is usually in implicit direct access?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Managers"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "What are the reasons to use implicit direct access with blended managers?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "To help them relax, get to know them, and address fears"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "As parts listen in to direct access to communication in a session, what opens up?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Self-compassion"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "What is the first step in the overarching guidelines for attuned direct access with protectors?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Unblend any of your parts as a therapist"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "If you make a mistake as an IFS therapist, what is the best recommendation?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Apologize readily and acknowledge your parts"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "What question do you ask the client to connect again with the Self?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Is it okay if I talk to (client’s name) now?"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "What do we want to avoid as therapists?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Part to part relation"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "What is the risk of doing direct access of exiles with a therapist?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "A part becoming attached to the Self of the therapist"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "What are the last two steps in explicit direct access with an exile?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Find out what’s happening/ why it took over and invite client to be there too"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "type": "array",
+        "tag": "section",
+        "class": ".clsQuestion",
+        "if_find_text_inside": "In the client video example, what did the client find most helpful?",
+        "click": [
+          {
+            "tag": "label",
+            "text": "Having the therapist watch and hear what the memory felt like to the client’s younger self"
+          }
+        ],
+        "sleep": 1
+      },
+      {
+        "title": "Save And Submit Exam",
+        "type": "click",
+        "tag": "button",
+        "text": "Save & Submit",
+        "sleep": 5
+      },
+      {
+        "title": "## [2] > Evaluation Level",
+        "type": "click",
+        "tag": "a",
+        "attr": "aria-label",
+        "value": "Click here For Evaluation",
+        "sleep": 5
+      },
+      {
+        "title": "Select",
+        "type": "click",
+        "tag": "label",
+        "attr": "data-single",
+        "value": "true",
+        "text": "Yes",
+        "sleep": 1,
+        "array_select_one": 0
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 0
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 1
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 2
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 3
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 4
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "sleep": 1,
+        "array_select_one": 5
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "attr": "data-val",
+        "value": "true",
+        "option_index": 1,
+        "array_select_one": 6
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "attr": "data-val",
+        "value": "true",
+        "option_index": 1,
+        "array_select_one": 7
+      },
+      {
+        "type": "click",
+        "tag": "input",
+        "attr": "aria-label",
+        "value": "Thumbs up",
+        "array_select_one": 0
+      },
+      {
+        "title": "End Exam 3 section",
+        "type": "click",
+        "tag": "button",
+        "class": "btnSaveChanges",
+        "sleep": 7
+      },
+      {
+        "type": "main_frame",
+        "sleep": 1
+      },
+      {
+        "title": "Close Exam 1 Modal",
+        "type": "refresh",
+        "sleep": 2
+      },
+      {
+        "title": "Change Tab",
+        "type": "click",
+        "tag": "a",
+        "attr": "href",
+        "value": "#certificate",
+        "sleep": 4
+      },
+      {
+        "title": "Start Exam 3",
+        "type": "click",
+        "tag": "a",
+        "text": "CPD Certificate",
+        "attr": "data-currentname",
+        "value": "CPD Certificate",
+        "sleep": 3,
+        "array_select_one": 3
+      },
+      {
+        "type": "frame",
+        "selector": ".mfp-iframe"
+      },
+      {
+        "type": "click",
+        "tag": "a",
+        "class": "NextPageForBeforeQuizMessage",
+        "ignore": true,
+        "sleep": 3
+      },
+      {
+        "title": "## [2] > Evaluation Level",
+        "type": "click",
+        "tag": "a",
+        "attr": "aria-label",
+        "value": "Click here For Evaluation",
+        "sleep": 5
+      },
+      {
+        "title": "Select",
+        "type": "click",
+        "tag": "label",
+        "attr": "data-single",
+        "value": "true",
+        "text": "Yes",
+        "sleep": 1,
+        "array_select_one": 0
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 0
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 1
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 2
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 3
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "array_select_one": 4
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "class": "clsDrpKeyRating",
+        "option_index": 1,
+        "sleep": 2,
+        "array_select_one": 5
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "attr": "data-val",
+        "value": "true",
+        "option_index": 1,
+        "array_select_one": 6
+      },
+      {
+        "type": "select",
+        "tag": "select",
+        "attr": "data-val",
+        "value": "true",
+        "option_index": 1,
+        "array_select_one": 7
+      },
+      {
+        "type": "click",
+        "tag": "input",
+        "attr": "aria-label",
+        "value": "Thumbs up",
+        "array_select_one": 0
+      },
+      {
+        "title": "End Exam 4 section",
+        "type": "click",
+        "tag": "button",
+        "class": "btnSaveChanges",
+        "sleep": 5
+      },
+      {
+        "type": "main_frame",
+        "sleep": 1
+      },
+      {
+        "title": "Open URL",
+        "type": "goto",
+        "url": "https://www.pesi.co.uk/account/myaccount",
+        "sleep": 5,
+        "max_retries": 4,
+        "retry_delay": 10,
+        "timeout": 160000
+      },
+      {
+        "type": "click",
+        "tag": "a",
+        "class": "frederika-CloseButton",
+        "ignore": true,
+        "sleep": 2
+      },
+      {
+        "type": "click",
+        "tag": "a",
+        "text": "Sign Out",
+        "sleep": 2
+      }
+    ]
+  }
+]
